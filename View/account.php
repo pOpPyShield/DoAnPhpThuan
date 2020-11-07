@@ -1,5 +1,5 @@
 <?php 
-        require_once '../core/init.php';
+        require_once 'core/Init.php';
         if(Input::exists()) {
             echo 'submitted';
         }
