@@ -1,4 +1,7 @@
-<?php include 'core/Init.php';
+<?php 
+
+    require '../core/Init.php';
+    require '../classes/Admin.php';
 
     $user = Admin::getInstance();
 

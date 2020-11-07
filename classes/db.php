@@ -1,5 +1,5 @@
 <?php 
-
+    require 'Config.php';
     class DB{
         private static $_instance = null;
         protected $_pdo;
