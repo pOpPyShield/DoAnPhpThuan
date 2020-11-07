@@ -8,7 +8,7 @@
                     <?php include_once 'slidebar.php'; ?>
                     <?php include_once 'sanphamt11.php';  ?>    
             </div>
-            <div class="main-product">
+            <div class="main-p">
                 <?php include_once 'pcbanchay.php'; ?>
             </div>
             <div class="main-product">
@@ -20,7 +20,7 @@
 
             <div class="main-product">
                 <?php include_once 'pc-workstation.php'; ?>
-            </div>
+    
             <div class="main-product">
                 <?php include_once 'banphimgaming.php'; ?>
             </div>
@@ -31,8 +31,7 @@
             <div class="row" id="selling">
                 <?php include_once 'emailenter.php'; ?>
             </div>
-        </div>
-
+    
         </section>
         </div>  
         </div>

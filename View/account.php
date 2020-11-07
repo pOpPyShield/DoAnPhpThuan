@@ -1,3 +1,10 @@
+<?php 
+        require_once '../core/init.php';
+        if(Input::exists()) {
+            echo 'submitted';
+        }
+?>
+
 <?php include_once 'header.php'; ?>
     <!-------Account-->
     <div class="account-page">
@@ -9,12 +16,11 @@
                     <hr id="Indicator">
                 </div>
 
-                <form id="LoginForm" method="POST">
-                    <input type="text" placeholder="Tên đăng nhập">
-                    <input type="password" placeholder="Mật khẩu">
+                <form id="LoginForm" method="POST" action="">
+                    <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username">
+                    <input type="password" placeholder="Mật khẩu" name="pwd" required>
                     <a href="#"><i>Quên mật khẩu</i></a>
                     <button type="submit" class="btn-login">Đăng nhập</button>
-
                 </form>
                 <form id="RegForm" method="POST">
                     <input type="text" placeholder="Tên đăng nhập">

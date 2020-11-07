@@ -2,13 +2,13 @@
 
     class DB{
         private static $_instance = null;
-        private $_pdo, 
-                $_query, 
+        protected $_pdo;
+        public  $_query, 
                 $_error= false , 
                 $_result, 
                 $_count = 0;
 
-        private function __construct() {
+        protected function __construct() {
             try {
                 $this->_pdo = new PDO('mysql:host=' . Config::get('mysql/host'). ';dbname='.Config::get('mysql/db'), Config::get('mysql/username'), Config::get('mysql/password'));
             } catch(PDOException $e) {
@@ -39,7 +39,7 @@
             return $this;
         }
 
-        private function action($action, $table, $where = array()) {
+        public function action($action, $table, $where = array()) {
             if (count($where) === 3)  {
                 $opreators = array('=', '>', '<', '>=', '<=');
 
@@ -95,9 +95,10 @@
             return $this->_error;
         }
 
-        public static function getInstance() {
+        protected static function getInstance() {
             if(!isset(self::$_instance)) {
                 self::$_instance = new DB();
+                echo 'success';
             }
 
             return self::$_instance;

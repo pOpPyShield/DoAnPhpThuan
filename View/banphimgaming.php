@@ -1,4 +1,4 @@
-<div class="title">
+                <div class="title">
                     <p class="product-selling">
                         Bàn Phím Gaming Giá Rẻ
                     </p>
@@ -75,7 +75,7 @@
                     <!-----6-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="Asset/Asset/img/ban-phim-6.jpg" class="model" alt="n-p1">
+                            <img src="Asset/img/ban-phim-6.jpg" class="model" alt="n-p1">
                             <div class="detail">
                                 <a href="#" class="name-product">Bàn phím cơ Gaming DAREU EK87 - Black (Multi-LED)</a>
                                 <div class="price-del">

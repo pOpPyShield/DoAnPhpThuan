@@ -1,7 +1,10 @@
 <?php 
 
-    class Admin {
-        
+    class Admin extends DB {
+        public function __construct()
+        {
+            Parent::getInstance();
+        }
     }
 
 
