@@ -1,9 +1,4 @@
-<?php 
-        require_once 'core/Init.php';
-        if(Input::exists()) {
-            echo 'submitted';
-        }
-?>
+
 
 <?php include_once 'header.php'; ?>
     <!-------Account-->

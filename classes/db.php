@@ -8,7 +8,7 @@
                 $_result, 
                 $_count = 0;
 
-        protected function __construct() {
+        public function __construct() {
             try {
                 $this->_pdo = new PDO('mysql:host=' . Config::get('mysql/host'). ';dbname='.Config::get('mysql/db'), Config::get('mysql/username'), Config::get('mysql/password'));
             } catch(PDOException $e) {
@@ -95,7 +95,7 @@
             return $this->_error;
         }
 
-        protected static function getInstance() {
+        public static function getInstance() {
             if(!isset(self::$_instance)) {
                 self::$_instance = new DB();
                 echo 'success';
