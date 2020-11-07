@@ -16,7 +16,13 @@
         ),
     );
     spl_autoload_register(function($class) {
-        require_once 'classes/'.$class .'.php';
+        $path = "classes/";
+        $extension = ".php";
+        $fullpath = $path . $class . $extension;
+        if(!file_exists($fullpath)) {
+            return false;
+        }
+        require_once $fullpath;
     });
     
 ?>

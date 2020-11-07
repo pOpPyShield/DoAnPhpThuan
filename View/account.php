@@ -1,5 +1,8 @@
+<?php include 'core/Init.php';
 
+    $user = Admin::getInstance();
 
+?>
 <?php include_once 'header.php'; ?>
     <!-------Account-->
     <div class="account-page">
