@@ -1,5 +1,5 @@
 <?php 
-
+    require '../classes/DB.php';
     class User extends DB{
         public $table = 'user';
 

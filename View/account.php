@@ -1,18 +1,20 @@
 <?php 
 
     require '../core/Init.php';
-    //require '../classes/Admin.php';
+    require '../classes/Admin.php';
     require '../classes/Input.php';
     require '../classes/token.php';
     require '../classes/session.php';
     require '../classes/user.php';
-    $username = $_POST['username'];
-    $pwd = $_POST['pwd'];
+    require '../functions/sanitize.php';
+    require '../classes/Config.php';
     $error = '';
     if(Input::exists()) {
         if(Input::checkLogin($username, $pwd)) {
             $username	= $_POST['username'];
             $password	= $_POST['password'];
+            /*$admin = new Admin();
+            $admin::login('SELECT', array('WHERE', 'UserName', 'Password', 'AND', $username, $password));*/
             //admin 
             /*$admin = new Admin();
             if($admin::login('SELECT', array('WHERE', 'UserName', 'Password', 'AND', $username, $password))->first() > 0) {

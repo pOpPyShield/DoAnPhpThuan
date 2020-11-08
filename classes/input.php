@@ -1,5 +1,5 @@
 <?php
-                require 'functions/sanitize.php';
+                require '../functions/sanitize.php';
 
                 class Input {
                     public static function exists($type = 'post') {
