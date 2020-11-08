@@ -1,9 +1,8 @@
 <?php 
 
     require '../core/Init.php';
-    require '../classes/Admin.php';
-
-    $user = Admin::getInstance();
+    //require '../classes/Admin.php';
+    require '../classes/Input.php';
 
 ?>
 <?php include_once 'header.php'; ?>
@@ -20,6 +19,7 @@
                 <form id="LoginForm" method="POST" action="">
                     <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username">
                     <input type="password" placeholder="Mật khẩu" name="pwd" required>
+                    <input type="hidden" name = "token" value="<?php echo token::generate();?>">
                     <a href="#"><i>Quên mật khẩu</i></a>
                     <button type="submit" class="btn-login">Đăng nhập</button>
                 </form>

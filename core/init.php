@@ -13,6 +13,7 @@
         ),
         'session' => array(
             'session_name' => array('user', 'admin', 'superadmin'),
+            'token_name' => 'token',
         ),
     );
     spl_autoload_register(function($class) {
