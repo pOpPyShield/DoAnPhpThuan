@@ -3,7 +3,27 @@
     require '../core/Init.php';
     //require '../classes/Admin.php';
     require '../classes/Input.php';
+    require '../classes/token.php';
+    require '../classes/session.php';
+    require '../classes/user.php';
+    $username = $_POST['username'];
+    $pwd = $_POST['pwd'];
+    $error = '';
+    if(Input::exists()) {
+        if(Input::checkLogin($username, $pwd)) {
+            $username	= $_POST['username'];
+            $password	= $_POST['password'];
+            //admin 
+            /*$admin = new Admin();
+            if($admin::login('SELECT', array('WHERE', 'UserName', 'Password', 'AND', $username, $password))->first() > 0) {
+                $result = $admin -> first();
+                $_SESSION['username'] = $result['userName'];
+            } else {
+                $error = 'invalid user name, password'
+            }*/
 
+        }
+    }
 ?>
 <?php include_once 'header.php'; ?>
     <!-------Account-->
@@ -16,7 +36,7 @@
                     <hr id="Indicator">
                 </div>
 
-                <form id="LoginForm" method="POST" action="">
+                <form id="LoginForm" method="POST">
                     <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username">
                     <input type="password" placeholder="Mật khẩu" name="pwd" required>
                     <input type="hidden" name = "token" value="<?php echo token::generate();?>">

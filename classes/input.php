@@ -1,5 +1,5 @@
 <?php
-
+                require 'functions/sanitize.php';
 
                 class Input {
                     public static function exists($type = 'post') {
@@ -15,8 +15,17 @@
                             break;
                         }
                     }
-                    public static function get($item) {
-                        
+
+                    public static function checkLogin($userName, $Password) {
+                        $msg = '';
+                        if(!empty($userName) && !empty($Password)) {
+                            $user1 = clean($userName);
+                            $pass1 = clean($Password);
+                            return true;
+                        } else {
+                            $msg = 'Error, try again';
+                        }
+                        return false;
                     }
                 }
 
