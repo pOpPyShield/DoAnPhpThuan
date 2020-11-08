@@ -1,8 +1,8 @@
 <?php 
-    require 'Config.php';
+    require_once 'Config.php';
     class DB{
-        private static $_instance = null;
-        protected $_pdo;
+        protected static $_instance = null;
+        public $_pdo;
         public  $_query, 
                 $_error= false , 
                 $_result, 
@@ -98,7 +98,7 @@
         public static function getInstance() {
             if(!isset(self::$_instance)) {
                 self::$_instance = new DB();
-                echo 'success';
+
             }
 
             return self::$_instance;

@@ -1,32 +1,4 @@
-<?php 
 
-    require '../core/Init.php';
-    require '../classes/Admin.php';
-    require '../classes/Input.php';
-    require '../classes/token.php';
-    require '../classes/session.php';
-    require '../classes/user.php';
-    require '../functions/sanitize.php';
-    require '../classes/Config.php';
-    $error = '';
-    if(Input::exists()) {
-        if(Input::checkLogin($username, $pwd)) {
-            $username	= $_POST['username'];
-            $password	= $_POST['password'];
-            /*$admin = new Admin();
-            $admin::login('SELECT', array('WHERE', 'UserName', 'Password', 'AND', $username, $password));*/
-            //admin 
-            /*$admin = new Admin();
-            if($admin::login('SELECT', array('WHERE', 'UserName', 'Password', 'AND', $username, $password))->first() > 0) {
-                $result = $admin -> first();
-                $_SESSION['username'] = $result['userName'];
-            } else {
-                $error = 'invalid user name, password'
-            }*/
-
-        }
-    }
-?>
 <?php include_once 'header.php'; ?>
     <!-------Account-->
     <div class="account-page">
@@ -38,12 +10,12 @@
                     <hr id="Indicator">
                 </div>
 
-                <form id="LoginForm" method="POST">
+                <form id="LoginForm" method="POST" action='login.php'>
                     <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username">
                     <input type="password" placeholder="Mật khẩu" name="pwd" required>
-                    <input type="hidden" name = "token" value="<?php echo token::generate();?>">
+                    <input type="hidden" name = "token" value="">
                     <a href="#"><i>Quên mật khẩu</i></a>
-                    <button type="submit" class="btn-login">Đăng nhập</button>
+                    <button type="submit" class="btn-login" name="login" value="login">Đăng nhập</button>
                 </form>
                 <form id="RegForm" method="POST">
                     <input type="text" placeholder="Tên đăng nhập">

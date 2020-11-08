@@ -1,26 +1,45 @@
 <?php 
-    require 'DB.php';
-    
-    class Admin extends DB {
-        public $_table='admin';
-
-        public static function login($action,$fields = array()) {
-            global $_table;
-            if(count($fields) === 6) {
-                $operator = '=';
-                $field = $fields[0];
-                $field1 = $fields[1];
-                $field2 = $fields[2];
-                $field3 = $fields[3];
-                $value = array($fields[4], $fields[5]);
-                        //SELECT * FROM admin       WHERE   username       =     ?   AND      Password      =       ?
-                $sql = "{$action} * FROM {$_table} {$field} {$field1} {$operator} ? {$field3}  {$field2} {$operator} ?";
-                echo $sql;
-                /*if(!parent::query($sql, $value)->error()) {
-                    return true;
-                }*/
+    require_once '../core/Init.php';
+    require_once '../classes/db.php';
+    class Admin {
+        protected static $_instance = null;
+        public $_pdo;
+        public  $_query, 
+                $_error= false , 
+                $_result, 
+                $_count = 0;
+        public function __construct()
+        {
+            try {
+                $this->_pdo = new PDO('mysql:host=' . Config::get('mysql/host'). ';dbname='.Config::get('mysql/db'), Config::get('mysql/username'), Config::get('mysql/password'));
+            } catch(PDOException $e) {
+                die($e->getMessage());
             }
-            //return false;
+        }
+
+        public static function getInstance() {
+            if(!isset(self::$_instance)) {
+                self::$_instance = new DB();
+
+            }
+
+            return self::$_instance;
+        }
+
+        public function login($username, $pwd) {
+            if(!empty($username) && !empty($pwd)) {
+                $st = $this->_pdo->prepare("SELECT * FROM admin WHERE UserName = ? AND Password = ?");
+                $st->bindParam(1, $username);
+                $st->bindParam(2, $pwd);
+                $st->execute();
+                if($st->rowCount() == 1) {
+                    echo 'User Verified';
+                } else {
+                    echo 'Incorrect username or password';
+                }
+            } else {
+                echo 'dont valid';
+            }
         }
     }
 

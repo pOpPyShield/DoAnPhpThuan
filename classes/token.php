@@ -1,5 +1,6 @@
 <?php
-    require 'Config.php';
+    include_once 'Config.php';
+    include_once 'session.php';
     class token {
         public static function generate() {
             return session::put(Config::get('session/token_name'), md5(uniqid()));
