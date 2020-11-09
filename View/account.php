@@ -17,12 +17,12 @@
                     <a href="#"><i>Quên mật khẩu</i></a>
                     <button type="submit" class="btn-login" name="login" value="login">Đăng nhập</button>
                 </form>
-                <form id="RegForm" method="POST">
-                    <input type="text" placeholder="Tên đăng nhập">
-                    <input type="text" placeholder="Email">
-                    <input type="password" placeholder="Mật khẩu">
-                    <input type="password" placeholder="Nhập lại mật khẩu">
-                    <button type="submit" class="btn-login">Đăng ký</button>
+                <form id="RegForm" method="POST" action="register.php">
+                    <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username">
+                    <input type="email" placeholder="Email" required name="email">
+                    <input type="password" placeholder="Mật khẩu" name="pwd" required>
+                    <input type="password" placeholder="Nhập lại mật khẩu"name="pwdAgain" required>
+                    <button type="submit" class="btn-login" name="reg" value="reg">Đăng ký</button>
 
                 </form>
             </div>
