@@ -5,25 +5,25 @@
         <div class="container" id="box-detail-product">
             <div class="row">
                 <div class="col">
-                    <img src="Asset/img/new-product-1-detail.jpg" class="new-product-1-detail" alt="detail-product" id="ProductImg">
+                    <img src="public/Asset/img/new-product-1-detail.jpg" class="new-product-1-detail" alt="detail-product" id="ProductImg">
                     <div class="img-row">
                         <div class="img-col">
-                            <img src="Asset/img/new-product-1-detail.jpg" width="100%" class="small-img">
+                            <img src="public/Asset/img/new-product-1-detail.jpg" width="100%" class="small-img">
                         </div>
                         <div class="img-col">
-                            <img src="Asset/img/img-col-1.jpg" width="100%" class="small-img">
+                            <img src="public/Asset/img/img-col-1.jpg" width="100%" class="small-img">
                         </div>
                         <div class="img-col">
-                            <img src="Asset/img/img-col-2.jpg" width="100%" class="small-img">
+                            <img src="public/Asset/img/img-col-2.jpg" width="100%" class="small-img">
                         </div>
                         <div class="img-col">
-                            <img src="Asset/img/img-col-3.jpg" width="100%" class="small-img">
+                            <img src="public/Asset/img/img-col-3.jpg" width="100%" class="small-img">
                         </div>
                         <div class="img-col">
-                            <img src="Asset/img/img-col-4.jpg" width="100%" class="small-img">
+                            <img src="public/Asset/img/img-col-4.jpg" width="100%" class="small-img">
                         </div>
                         <div class="img-col">
-                            <img src="Asset/img/img-col-5.jpg" width="100%" class="small-img">
+                            <img src="public/Asset/img/img-col-5.jpg" width="100%" class="small-img">
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                     <h1>HT Titan 10</h1>
                     <hr>
                     <div class="free-ship">
-                        <img src="Asset/img/free-ship.png" alt="fre" class="img-free-ship">Miễn phí vận chuyển
+                        <img src="public/Asset/img/free-ship.png" alt="fre" class="img-free-ship">Miễn phí vận chuyển
                     </div>
                     <div class="free-ship-1">
                         <p>Miễn Phí Vận Chuyển khi đơn đạt giá trị tối thiểu</p>
@@ -53,7 +53,7 @@
     <!-------END-single product details-->
     
 <?php include 'footer.php';?>
-    <script src="Asset/Asset/js/index.js"></script>
+    <script src="public/Asset/Asset/js/index.js"></script>
 </body>
 
 </html>

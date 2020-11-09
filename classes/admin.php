@@ -1,6 +1,5 @@
 <?php 
-    require_once '../core/Init.php';
-    require_once '../classes/db.php';
+    require_once './core/Init.php';
     class Admin {
         protected static $_instance = null;
         public $_pdo;
@@ -8,6 +7,8 @@
                 $_error= false , 
                 $_result, 
                 $_count = 0;
+        public $msg = '';
+        public $username = '';
         public function __construct()
         {
             try {
@@ -28,26 +29,43 @@
         public function getResult() {
             return $this->_result;
         }
+        public function getMessage() {
+            return $this->msg;
+        }
+        public function getUserName() {
+            return $this->username;
+        }
         public function login($username, $pwd) {
-            $un = filter_var($username, FILTER_SANITIZE_STRING,  FILTER_FLAG_STRIP_HIGH);
+            //$this->_error = false;
+            //$this->msg = '';
             if(!empty($username) && !empty($pwd)) {
-                $st = $this->_pdo->prepare("SELECT * FROM admin WHERE UserName = ? AND Password = ?");
-                $st->bindParam(1, $un);
-                $st->bindParam(2, $pwd);
+                $st = $this->_pdo->prepare("SELECT * FROM admin WHERE UserName = ?");
+                $st->bindParam(1, $username);
                 $st->execute();
                 if($st->rowCount() == 1) {
-                    $this->_result = $st->fetch(PDO::FETCH_OBJ);
-                    if(password_verify($pwd, $this->_result['Password'] && $_SESSION['UserName'] = $username)) {
-                        header("location: indexi.php?message=success");
+                    $this->_result = $st->fetch();
+                    if(password_verify($_POST['pwd'], $this->_result['Password'])) {
+                        $this->username = $this->_result['UserName'];
+                        return true;
                     }
+                    /*if(password_verify($pwd, $this->_result['Password'])) {
+                        $this->username = $this->_result['UserName'];
+                        echo 'Success';
+                    } else {
+                        echo 'failed verify';
+                    }*/
+                    /*if($_SESSION['UserName'] = $un && password_verify( $pwd, $this->_result['Password'])) {
+                        header("location: indexi.php?message=success");
+                    }*/
                     
                 } else {
-                    echo 'Incorrect username or password';
+                    return false;
                 }
             } else {
-                echo 'dont valid';
+                return false;
             }
         }
+        
 
         public function reg($username, $email, $pwd, $pwdagain) {
             $email1 = filter_var( $email, FILTER_VALIDATE_EMAIL);

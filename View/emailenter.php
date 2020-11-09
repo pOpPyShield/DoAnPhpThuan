@@ -1,4 +1,4 @@
-<div class="col">
+            <div class="col">
                     <p class="title-selling">
                         Nhập email để nhận nhiều khuyến mãi
                     </p>

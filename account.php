@@ -1,5 +1,5 @@
 
-<?php include_once 'header.php'; ?>
+<?php include_once './View/header.php';?>
     <!-------Account-->
     <div class="account-page">
         <div class="container">
@@ -10,7 +10,7 @@
                     <hr id="Indicator">
                 </div>
 
-                <form id="LoginForm" method="POST" action='login.php'>
+                <form id="LoginForm" method="POST" action='display.php'>
                     <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username">
                     <input type="password" placeholder="Mật khẩu" name="pwd" required>
                     <input type="hidden" name = "token" value="">
@@ -32,7 +32,7 @@
     <!-------END-Account-->
 
 
- <?php include_once 'footer.php' ?>
+ <?php include_once './View/footer.php' ?>
 
     <script >
         var LoginForm = document.getElementById("LoginForm");

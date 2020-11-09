@@ -3,7 +3,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <a href="#" class="logo"><img src="Asset/img/LOGO.png" alt="logo"></a>
+                        <a href="#" class="logo"><img src="public/Asset/img/LOGO.png" alt="logo"></a>
                     </div>
                     <div class="col-6" id="search">
                         <form>
