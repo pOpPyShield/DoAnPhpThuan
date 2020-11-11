@@ -1,7 +1,7 @@
 
 <?php
     session_start();
-    require_once './classes/Admin.php';
+    require_once './classes/admin.php';
     require_once './classes/user.php';
     require_once './classes/superadmin.php';
         /*$name = $_POST['username'];
