@@ -1,5 +1,6 @@
 <?php 
     require_once './core/Init.php';
+    session_start();
     class User{
         protected static $_instance = null;
         public $_pdo;
@@ -34,6 +35,7 @@
                     $this->_result = $st->fetch();
                     if(password_verify($_POST['pwd'], $this->_result['Password'])) {
                         $this->username = $this->_result['UserName'];
+                        $_SESSION['UserName'] = $this->_result['UserName'];
                         $_SESSION['level'] = 'user';
                         $_SESSION['is_login'] = true;
                         return true;

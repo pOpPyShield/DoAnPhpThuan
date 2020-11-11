@@ -42,6 +42,8 @@
                     $this->_result = $st->fetch();
                     if(password_verify($_POST['pwd'], $this->_result['Password'])) {
                         $this->username = $this->_result['UserName'];
+                        $_SESSION['id'] = $this->_result['AdminID'];
+                        $_SESSION['UserName'] = $this->_result['UserName'];
                         $_SESSION['level'] = 'admin';
                         $_SESSION['is_login'] = true;
                         return true;

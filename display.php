@@ -1,6 +1,6 @@
 
 <?php
-
+    session_start();
     require_once './classes/Admin.php';
     require_once './classes/user.php';
     require_once './classes/superadmin.php';
@@ -16,19 +16,18 @@
             $pwd = $_POST['pwd'];
             if($user->login($name, $pwd) != false) {
                 if($_SESSION['level'] == 'user' && $_SESSION['is_login'] == true) {
-                    $_SESSION['UserName'] = $object->getUserName();
-                    echo '<script>location.href="indexiuser.php"</script>';
+                    header('Location: ./');
                 }   
-            } elseif($admin->login($name, $pwd)) {
+            } elseif($object->login($name, $pwd)) {
                 if($_SESSION['level'] == 'admin' && $_SESSION['is_login'] == true) {
-                    echo '<script>location.href="AdminDashboard.php"</script>';
+                    header('Location: ./admindashboard.php?admin=' . $_SESSION['id']);
                 }
             } elseif($superadmin->login($name, $pwd)) {
                 if($_SESSION['level'] == 'superadmin' && $_SESSION['is_login']==true) {
-                    echo '<script>location.href="SuperAdminDashboard.php"</script>';
+                    header('Location: ./superadmindashboard.php?superadmin=' . $_SESSION['id']);
                 }
             } else {
-                echo '<script>location.href="account.php"</script>';
+                header('location: ./account.php?message=failed');
             } 
         }
 
