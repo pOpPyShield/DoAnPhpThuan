@@ -7,7 +7,6 @@
                 $_error= false , 
                 $_result, 
                 $_count = 0;
-        public $msg = '';
         public $username = '';
         public function __construct()
         {
@@ -29,9 +28,6 @@
         public function getResult() {
             return $this->_result;
         }
-        public function getMessage() {
-            return $this->msg;
-        }
         public function getUserName() {
             return $this->username;
         }
@@ -46,7 +42,11 @@
                     $this->_result = $st->fetch();
                     if(password_verify($_POST['pwd'], $this->_result['Password'])) {
                         $this->username = $this->_result['UserName'];
+                        $_SESSION['level'] = 'admin';
+                        $_SESSION['is_login'] = true;
                         return true;
+                    } else {
+                        return false;
                     }
                     /*if(password_verify($pwd, $this->_result['Password'])) {
                         $this->username = $this->_result['UserName'];

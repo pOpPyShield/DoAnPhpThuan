@@ -1,15 +1,13 @@
 <?php 
 
-
-        require_once '../classes/admin.php';
-
+        require_once './classes/user.php';
     if(isset($_POST['reg'])) {
         $name = $_POST['username'];
         $email = $_POST['email'];
         $pwd = $_POST['pwd'];
         $pwdagain = $_POST['pwdAgain'];
-        $object = new Admin();
-        $object->reg($name, $email, $pwd,$pwdagain);
+        $userReg = new User();
+        $userReg->reg($name, $pwd, $email, $pwdagain);
     }   
 
     if(isset($_GET['message'])) {
@@ -18,6 +16,7 @@
             echo '<script>alert("Registation done")</script>';
         }
     }
+    
 
 
 ?>
