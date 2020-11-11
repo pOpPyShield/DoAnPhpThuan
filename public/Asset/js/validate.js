@@ -1,5 +1,5 @@
 function validate() {
-    const username = document.getElementById("username").innerText;
+    const username = document.getElementById("name").innerText;
     const password = document.getElementById("pwd").innerText;
 
     if(username.value <= 8) {
