@@ -9,10 +9,10 @@
                     <span onclick="register()">Đăng ký</span>
                     <hr id="Indicator">
                 </div>
-
-                <form id="LoginForm" method="POST" action='display.php'>
-                    <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username">
-                    <input type="password" placeholder="Mật khẩu" name="pwd" required>
+                
+                <form id="LoginForm" method="POST" action='display.php' onsubmit="return validate()">
+                    <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username" id='name'>
+                    <input type="password" placeholder="Mật khẩu" name="pwd" required id='pwd'>
                     <input type="hidden" name = "token" value="">
                     <a href="#"><i>Quên mật khẩu</i></a>
                     <button type="submit" class="btn-login" name="login" value="login">Đăng nhập</button>

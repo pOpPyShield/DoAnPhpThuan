@@ -15,6 +15,7 @@
     <script type="text/javascript" src="public/Asset/js/lightslider.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script defer src="public/Asset/js/validate.js"></script>
     <title>Admin</title>
 </head>
 
