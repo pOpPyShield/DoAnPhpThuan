@@ -26,6 +26,7 @@
 
                 </form>
             </div>
+            <script defer src="public/Asset/js/validate.js"></script>
 
         </div>
     </div>
