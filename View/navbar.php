@@ -19,13 +19,17 @@
                         <i class="fas fa-shopping-cart cart"></i> Giỏ hàng
                     </div> -->
 
-                    
                     <?php 
                         /** If user login, remove icon login and display name, image */
                         if(isset($_SESSION['UserName'])) {
                             echo ' <div class="col" id="Cart">
                                         <i class="fas fa-shopping-cart cart"></i> Giỏ hàng
                                     </div> ';
+                            /** Check if the user have image, then we display the img, or display the default 
+                             * 
+                             * $user->checkIMG
+                            */
+                            echo '<a href="./uploadImg/uploadImg.php">Profile</a>"';
                             echo '<h1>'.$_SESSION['UserName'].'</h1>';
                             echo '<a href="logout.php">logout</a>';
                             

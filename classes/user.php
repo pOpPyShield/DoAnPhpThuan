@@ -6,6 +6,8 @@
         public $_pdo;
         public $_result;
         public $username = '';
+        public $_userID;
+        public $_imgID;
         public function __construct()
         {
             try {
@@ -25,7 +27,13 @@
         public function getUserName() {
             return $this->username;
         }
+        public function getID() {
+            return $this->_userID;
+        }
 
+        public function getImgID() {
+            return $this->_imgID;
+        }
         public function login($username, $pwd) {
             if(!empty($username) && !empty($pwd)) {
                 $st = $this->_pdo->prepare("SELECT * FROM user WHERE UserName=?");
@@ -35,6 +43,7 @@
                     $this->_result = $st->fetch();
                     if(password_verify($_POST['pwd'], $this->_result['Password'])) {
                         $this->username = $this->_result['UserName'];
+                        $this->_userID = $this->_result['UserID'];
                         $_SESSION['UserName'] = $this->_result['UserName'];
                         $_SESSION['level'] = 'user';
                         $_SESSION['is_login'] = true;
@@ -49,7 +58,7 @@
                 return false;
             }
         }
-        
+
         public function reg($username, $Password, $Email, $pwdagain) {
             $email1 = filter_var( $Email, FILTER_VALIDATE_EMAIL);
             if(!empty($username) && !empty($Email) && $email1 != false && !empty($Password) && !empty($pwdagain)) {
@@ -62,7 +71,10 @@
                     $st->bindParam(1, $username);
                     $st->bindParam(2, $pwd1);
                     $st->bindParam(3, $email1);
-                    if($st->execute()) {
+                    $st1 = $this->_pdo->prepare("INSERT INTO profileimg(userid, status) VALUE(?,?,?)");
+                    $st1->bindParam(1, $this->_userID);
+                    $st1->bindParam(2, 1);
+                    if($st->execute() && $st1->execute()) {
                         header('location: account.php?message=success');
                     }
 
@@ -70,6 +82,18 @@
             } else {
                 echo 'dont valid';
             }
+        }
+        /** Replace to another model, must be IMG model to check IMG and upload IMG for user */
+        public function checkImg($idUser) {
+            $st = $this->_pdo->prepare("SELECT * FROM profileimg WHERE userId = $idUser");
+            $st->execute();
+            $this->_result = $st->fetch();
+            if($this->_result['status'] == 0) {
+                 $this->_imgID = $idUser;
+                 return true;
+            }
+
+            return false;
         }
     }
 
