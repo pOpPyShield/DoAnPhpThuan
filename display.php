@@ -7,6 +7,7 @@
         /*$name = $_POST['username'];
         $pwd = $_POST['pwd'];
         */
+        
 
         $object = new Admin();
         $user = new User();
@@ -42,7 +43,7 @@
 
         if(isset($_GET['message'])) {
             $message = $_GET['message'];
-            if($message == 'success') {
+            if($message === 'success') {
                 echo '<script>alert("Registation done")</script>';
             }
         }
