@@ -1,7 +1,7 @@
 <?php 
 
     if(isset($_POST['submit'])) {
-            $file = $_FILES['file'];
+        $file = $_FILES['file'];
         $fileName = $_FILES['file']['name'];
         $fileSize = $_FILES['file']['size'];
         $fileType = $_FILES['file']['type'];
