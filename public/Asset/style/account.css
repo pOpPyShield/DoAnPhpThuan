@@ -41,7 +41,6 @@
 
 .form-btn {
     display: inline-block;
-    font-size: 100px;
 }
 
 .form-container form {
@@ -102,4 +101,3 @@ form a {
     transform: translateX(100px);
     transition: transform 1s;
 }
-
