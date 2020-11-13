@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include_once './View/header.php';?>
 
     <!-------single product details-->
     <div class="detail-product-1">
@@ -52,7 +52,7 @@
     </div>
     <!-------END-single product details-->
     
-<?php include 'footer.php';?>
+    <?php include_once './View/footer.php' ?>
     <script src="public/Asset/Asset/js/index.js"></script>
 </body>
 

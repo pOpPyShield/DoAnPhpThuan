@@ -10,7 +10,7 @@
                             <img src="public/Asset/img/new-product-1.jpg" class="model" alt="n-p1">
 
                             <div class="detail">
-                                <a href="detail-product.html" class="name-product">HT Titan 10 M</a>
+                                <a href="detail-product.php" class="name-product">HT Titan 10 M</a>
                                 <div class="price-del">
                                     <del>13,960,000₫</del>
                                     <div class="price">15,390,000₫</div>
