@@ -2,9 +2,9 @@
 
     if(isset($_SESSION['UserName'])) {
         session_destroy();
-        echo "<script>location.href='account.php'</script>";
+        header('Location: ./');
     } else {
-        echo "<script>location.href='account.php'</script>";
+        header('Location: ./account.php');
     }
 
 ?>
