@@ -8,6 +8,7 @@
         public $username = '';
         public $_userID;
         public $_imgID;
+        public $_resultUserReg;
         public function __construct()
         {
             try {
@@ -34,6 +35,10 @@
         public function getImgID() {
             return $this->_imgID;
         }
+
+        public function getResultUserReg() {
+            return $this->_resultUserReg;
+        }
         public function login($username, $pwd) {
             if(!empty($username) && !empty($pwd)) {
                 $st = $this->_pdo->prepare("SELECT * FROM user WHERE UserName=?");
@@ -43,7 +48,8 @@
                     $this->_result = $st->fetch();
                     if(password_verify($_POST['pwd'], $this->_result['Password'])) {
                         $this->username = $this->_result['UserName'];
-                        $this->_userID = $this->_result['UserID'];
+                        //$this->_userID = $this->_result['UserID'];
+                        $_SESSION['id'] = $this->_result['UserID'];
                         $_SESSION['UserName'] = $this->_result['UserName'];
                         $_SESSION['level'] = 'user';
                         $_SESSION['is_login'] = true;
@@ -63,24 +69,34 @@
             $email1 = filter_var( $Email, FILTER_VALIDATE_EMAIL);
             if(!empty($username) && !empty($Email) && $email1 != false && !empty($Password) && !empty($pwdagain)) {
                 if($Password != $pwdagain) {
-                    header('Location: account.php');
+                    //If pw = 0, that is the pwd is not match
+                    header('Location: account.php?pw=0');
                     exit();
                 } else {
                     $pwd1 = password_hash($Password, PASSWORD_BCRYPT);
+                    //Reg user
                     $st = $this->_pdo->prepare("INSERT INTO user(UserName, Password, Email) VALUES (?, ?, ?)");
                     $st->bindParam(1, $username);
                     $st->bindParam(2, $pwd1);
                     $st->bindParam(3, $email1);
-                    $st1 = $this->_pdo->prepare("INSERT INTO profileimg(userid, status) VALUE(?,?,?)");
-                    $st1->bindParam(1, $this->_userID);
-                    $st1->bindParam(2, 1);
-                    if($st->execute() && $st1->execute()) {
+                    //If execute success, then go to if block
+                    if($st->execute()) {
+                        //Select user with username
+                        $st2 = $this->_pdo->prepare("SELECT * FROM user where UserName = ?");
+                        $st2->bindParam(1, $username);
+                        $st2->execute();
+                        $this->_resultUserReg = $st2->fetch();
+                         //Insert value of sql 'select user' 
+                        $st1 = $this->_pdo->prepare("INSERT INTO profileimg(userid, status) VALUE(?,?)");
+                        $st1->bindParam(1, $this->_resultUserReg['UserID']);
+                        $st1->bindParam(2, 1);
+                        $st1->execute();
                         header('location: account.php?message=success');
+                        return true;
                     }
-
                 }
             } else {
-                echo 'dont valid';
+                return false;
             }
         }
         /** Replace to another model, must be IMG model to check IMG and upload IMG for user */

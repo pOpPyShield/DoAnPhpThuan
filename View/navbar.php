@@ -20,6 +20,7 @@
                     </div> -->
 
                     <?php 
+                        require_once './classes/img.php';
                         /** If user login, remove icon login and display name, image */
                         if(isset($_SESSION['UserName'])) {
                             echo ' <div class="col" id="Cart">
@@ -29,6 +30,14 @@
                              * 
                              * $user->checkIMG
                             */
+
+                            $imgCheck = new Img();
+
+                            if($imgCheck->checkImg($_SESSION['UserID']) == true) {
+                                echo '<img src="uploads/profile'.$_SESSION['UserID'].  '">'; /*This is the type of img*/ 
+                            } else {
+                                echo '<img src="uploads/defaultIMG.jpg">';
+                            }
                             echo '<a href="./uploadImg/uploadImg.php">Profile</a>"';
                             echo '<h1>'.$_SESSION['UserName'].'</h1>';
                             echo '<a href="logout.php">logout</a>';
