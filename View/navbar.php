@@ -19,17 +19,16 @@
                         <i class="fas fa-shopping-cart cart"></i> Giỏ hàng
                     </div> -->
 
-                    <?php 
+            <!--1--><?php 
                         require_once './classes/img.php';
                         /** If user login, remove icon login and display name, image */
                         if(isset($_SESSION['UserName'])) {
-                            echo ' <div class="col-2" id="Cart">
-                                        <i class="fas fa-shopping-cart cart"></i> Giỏ hàng
-                                    </div> ';
-                            /** Check if the user have image, then we display the img, or display the default 
-                             * 
-                            */
-
+                    ?>      
+                            <div class="col-2" id="Cart">
+                                <i class="fas fa-shopping-cart cart"></i> Giỏ hàng
+                            </div>;
+                            <!-- Check if the user have image, then we display the img, or display the default -->
+            <!--2--><?php
                             $imgCheck = new Img();
 
                             if($imgCheck->checkImg($_SESSION['id']) == true) {
@@ -38,12 +37,14 @@
                             } else {
                                 echo '<img src="uploads/'. $imgCheck->getImgName() .'.'. $imgCheck->getImgType().'">';
                             }
-                            echo '<a href="./uploadImg.php">upload</a>"';
                             echo '<h1>'.$_SESSION['UserName'].'</h1>';
-                            echo '<a href="includes/logout.php">logout</a>';
-                            
+                    ?>
+                            <a href="./uploadImg.php">upload</a>;
+                            <a href="includes/logout.php">logout</a>;
+            <!--3--><?php     
                         } else {
-                            echo ' <div class="col" id="Account">
+                    ?>
+                                    <div class="col" id="Account">
                                         <div class="dropdown">
                                             <button class="dropbtn"><i class="fas fa-user account"></i> Tài khoản</button>
                                             <div class="dropdown-content">
@@ -51,19 +52,10 @@
                                                 <a href="account.php">Đăng ký</a>
                                             </div>
                                         </div>
-                                    </div>';
+                                    </div>;
+            <!--4--><?php 
                         }
-                    
                     ?>
-                   <!-- <div class="col" id="Account">
-                        <div class="dropdown">
-                            <button class="dropbtn"><i class="fas fa-user account"></i> Tài khoản</button>
-                            <div class="dropdown-content">
-                                <a href="account.php">Đăng nhập</a>
-                                <a href="account.php">Đăng ký</a>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>

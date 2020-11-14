@@ -11,6 +11,10 @@
         $expires = date("U") + 1800;
 
         //Connect to db
+
+        //Get the email enter in input
+        $userEmail = $_POST['email'];
+        $sql = "DELETE FROM pwdreset WHERE pwdResetEmail=?";
     } else {
         // Because we use folder to includes, then the header must be ../ to rediect to root folder
         header('Location: ../');
