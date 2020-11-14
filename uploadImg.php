@@ -1,6 +1,5 @@
 <?php 
 
-    session_start();
     require_once './classes/img.php';
     if(isset($_POST['submit'])) {
         $img = new Img();
@@ -12,17 +11,9 @@
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<?php include_once './View/header.php';?>
     <form action="uploadImg.php" method="POST" enctype="multipart/form-data">
         <input type="file" name='file'>
         <button type="submit" name="submit">upload</button>
     </form>
-</body>
-</html>
+<?php include_once './View/footer.php';?>
