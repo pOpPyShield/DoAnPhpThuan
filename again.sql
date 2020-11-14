@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2020 at 02:43 AM
+-- Generation Time: Nov 14, 2020 at 09:06 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -310,8 +310,17 @@ CREATE TABLE `productdetail` (
 CREATE TABLE `profileimg` (
   `id` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
-  `status` int(11) NOT NULL
+  `Name` varchar(100) NOT NULL,
+  `status` tinyint(4) NOT NULL,
+  `Type` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `profileimg`
+--
+
+INSERT INTO `profileimg` (`id`, `userId`, `Name`, `status`, `Type`) VALUES
+(1, 6, 'test', 0, 'png');
 
 -- --------------------------------------------------------
 
@@ -352,7 +361,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`UserID`, `UserName`, `Email`, `Password`, `Address`, `PhoneNum`) VALUES
-(1, 'bentenyson', 'bqhuy.19it4@vku.udn.vn', '$2y$10$TBrGIZD7OtjNTn.Ws3ukwuZTjMZ.dh88rTwOGpy7N3hXs2R07bRQe', '', '');
+(6, 'bentntn261120', 'bqhuy.19it4@vku.udn.vn', '$2y$10$FzYTgjlwms0QBOpUT/VU8utloXZED2kANORTU9VVvh6hhcxwqI2HK', '', '');
 
 --
 -- Indexes for dumped tables
@@ -654,7 +663,7 @@ ALTER TABLE `productdetail`
 -- AUTO_INCREMENT for table `profileimg`
 --
 ALTER TABLE `profileimg`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `superadmin`
@@ -666,7 +675,7 @@ ALTER TABLE `superadmin`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `UserID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `UserID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
