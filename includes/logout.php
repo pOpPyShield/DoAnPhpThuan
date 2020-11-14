@@ -4,7 +4,7 @@
         session_destroy();
         header('Location: ../');
     } else {
-        header('Location: ../account.php');
+        header('Location: ../account_reg.php');
     }
 
 ?>

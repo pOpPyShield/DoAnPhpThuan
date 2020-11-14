@@ -3,7 +3,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <a href="index.php" class="logo"><img src="public/Asset/img/LOGO.png" alt="logo"></a>
+                        <a href="#" class="logo"><img src="public/Asset/img/LOGO.png" alt="logo"></a>
                     </div>
                     <div class="col-5" id="search">
                         <form>
@@ -25,7 +25,7 @@
                         if(isset($_SESSION['UserName'])) {
                     ?>      
                             <div class="col-2" id="Cart">
-                                <i class="fas fa-shopping-cart cart"></i> Giỏ hàng
+                                <a href="#"><i class="fas fa-shopping-cart cart"></i> Giỏ hàng</a>
                             </div>
                             <!-- Check if the user have image, then we display the img, or display the default -->
             <!--2--><?php
@@ -48,8 +48,8 @@
                                         <div class="dropdown">
                                             <button class="dropbtn"><i class="fas fa-user account"></i> Tài khoản</button>
                                             <div class="dropdown-content">
-                                                <a href="account.php">Đăng nhập</a>
-                                                <a href="account.php">Đăng ký</a>
+                                                <a href="account_log.php">Đăng nhập</a>
+                                                <a href="account_reg.php">Đăng ký</a>
                                             </div>
                                         </div>
                                     </div>

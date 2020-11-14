@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="public/Asset/style/style.css">
-    <link rel="stylesheet" type="text/css" href="public/Asset/style/account.css">
+    <link rel="stylesheet" type="text/css" href="public/Asset/style/account_log.css">
     <link rel="stylesheet" type="text/css" href="public/Asset/style/lightslider.css">
     <link rel="stylesheet" type="text/css" href="public/Asset/style/detail-product.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
