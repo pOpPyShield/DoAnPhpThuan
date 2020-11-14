@@ -1,9 +1,6 @@
 <?php 
     require_once './core/Init.php';
     class Img{
-<<<<<<< HEAD
-        
-=======
         protected static $_instance = null;
         public $_pdo;
         public $_result;
@@ -76,6 +73,5 @@
                 }
             }
         }
->>>>>>> thienBranch
     }
 ?>

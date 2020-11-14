@@ -1,10 +1,6 @@
 <?php 
 
-<<<<<<< HEAD
-        require_once './classes/user.php';
-=======
     require_once './classes/user.php';
->>>>>>> thienBranch
     if(isset($_POST['reg'])) {
         $name = $_POST['username'];
         $email = $_POST['email'];
