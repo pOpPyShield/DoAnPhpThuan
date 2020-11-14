@@ -2,9 +2,9 @@
 
     if(isset($_SESSION['UserName'])) {
         session_destroy();
-        header('Location: ./');
+        header('Location: ../');
     } else {
-        header('Location: ./account.php');
+        header('Location: ../account.php');
     }
 
 ?>

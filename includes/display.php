@@ -17,18 +17,18 @@
             $pwd = $_POST['pwd'];
             if($user->login($name, $pwd) != false) {
                 if($_SESSION['level'] == 'user' && $_SESSION['is_login'] == true) {
-                    header('Location: ./');
+                    header('Location: ../');
                 }   
             } elseif($object->login($name, $pwd)) {
                 if($_SESSION['level'] == 'admin' && $_SESSION['is_login'] == true) {
-                    header('Location: ./admindashboard.php?admin=' . $_SESSION['id']);
+                    header('Location: ../admindashboard.php?admin=' . $_SESSION['id']);
                 }
             } elseif($superadmin->login($name, $pwd)) {
                 if($_SESSION['level'] == 'superadmin' && $_SESSION['is_login']==true) {
-                    header('Location: ./superadmindashboard.php?superadmin=' . $_SESSION['id']);
+                    header('Location: ../superadmindashboard.php?superadmin=' . $_SESSION['id']);
                 }
             } else {
-                header('location: ./account.php?message=failed');
+                header('location: ../account.php?message=failed');
             } 
         }
 
@@ -43,7 +43,7 @@
 
         if(isset($_GET['message'])) {
             $message = $_GET['message'];
-            if($message === 'success') {
+            if($message == 'success') {
                 echo '<script>alert("Registation done")</script>';
             }
         }

@@ -10,15 +10,15 @@
                     <hr id="Indicator">
                 </div>
                 
-                <form id="LoginForm" method="POST" action="display.php" onsubmit="return validate()">
+                <form id="LoginForm" method="POST" action="includes/display.php" onsubmit="return validate()">
                     <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username" id='name'>
                     <div id="user_error"></div>
                     <input type="password" placeholder="Mật khẩu" name="pwd" required id='pwd'>
                     <input type="hidden" name = "token" value="">
-                    <a href="#"><i>Quên mật khẩu</i></a>
+                    <a href="forgotpwd.php"><i>Quên mật khẩu</i></a>
                     <button type="submit" class="btn-login" name="login" value="login">Đăng nhập</button>
                 </form>
-                <form id="RegForm" method="POST" action="register.php">
+                <form id="RegForm" method="POST" action="includes/register.php">
                     <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username">
                     <input type="email" placeholder="Email" required name="email">
                     <input type="password" placeholder="Mật khẩu" name="pwd" required>

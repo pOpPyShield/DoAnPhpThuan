@@ -40,7 +40,7 @@
                             }
                             echo '<a href="./uploadImg.php">upload</a>"';
                             echo '<h1>'.$_SESSION['UserName'].'</h1>';
-                            echo '<a href="logout.php">logout</a>';
+                            echo '<a href="includes/logout.php">logout</a>';
                             
                         } else {
                             echo ' <div class="col" id="Account">
