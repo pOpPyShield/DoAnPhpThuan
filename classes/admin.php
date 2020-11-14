@@ -1,5 +1,6 @@
 <?php 
-    require_once './core/Init.php';
+    require_once '../core/init.php';
+    require_once 'config.php';
     class Admin {
         protected static $_instance = null;
         public $_pdo;

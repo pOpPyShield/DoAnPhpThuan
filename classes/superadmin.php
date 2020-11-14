@@ -1,5 +1,6 @@
 <?php
-    require_once './core/Init.php';
+    require_once '../core/Init.php';
+    require_once 'config.php';
     Class SuperAdmin{
 
         public $_pdo;

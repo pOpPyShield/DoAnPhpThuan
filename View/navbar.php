@@ -26,7 +26,7 @@
                     ?>      
                             <div class="col-2" id="Cart">
                                 <i class="fas fa-shopping-cart cart"></i> Giỏ hàng
-                            </div>;
+                            </div>
                             <!-- Check if the user have image, then we display the img, or display the default -->
             <!--2--><?php
                             $imgCheck = new Img();
@@ -39,8 +39,8 @@
                             }
                             echo '<h1>'.$_SESSION['UserName'].'</h1>';
                     ?>
-                            <a href="./uploadImg.php">upload</a>;
-                            <a href="includes/logout.php">logout</a>;
+                            <a href="./uploadImg.php">upload</a>
+                            <a href="includes/logout.php">logout</a>
             <!--3--><?php     
                         } else {
                     ?>
@@ -52,7 +52,7 @@
                                                 <a href="account.php">Đăng ký</a>
                                             </div>
                                         </div>
-                                    </div>;
+                                    </div>
             <!--4--><?php 
                         }
                     ?>
