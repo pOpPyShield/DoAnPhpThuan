@@ -10,8 +10,14 @@
                     <hr id="Indicator">
                 </div>
                 
+<<<<<<< HEAD
                 <form id="LoginForm" method="POST" action='display.php' onsubmit="return validate()">
                     <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username" id='name'>
+=======
+                <form id="LoginForm" method="POST" action="display.php" onsubmit="return validate()">
+                    <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username" id='name'>
+                    <div id="user_error"></div>
+>>>>>>> thienBranch
                     <input type="password" placeholder="Mật khẩu" name="pwd" required id='pwd'>
                     <input type="hidden" name = "token" value="">
                     <a href="#"><i>Quên mật khẩu</i></a>
@@ -35,24 +41,7 @@
 
  <?php include_once './View/footer.php' ?>
 
-    <script >
-        var LoginForm = document.getElementById("LoginForm");
-        var RegForm = document.getElementById("RegForm");
-        var Indicator = document.getElementById("Indicator");
 
-        function register() {
-            RegForm.style.transform = "translateX(0px)";
-            LoginForm.style.transform = "translateX(0px)";
-            Indicator.style.transform = "translateX(100px)";
-            
-        }
-
-        function login() {
-            RegForm.style.transform = "translateX(400px)";
-            LoginForm.style.transform = "translateX(400px)";
-            Indicator.style.transform = "translateX(0px)";
-        }
-    </script>
 </body>
 
 </html>

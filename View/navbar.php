@@ -3,9 +3,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <a href="#" class="logo"><img src="public/Asset/img/LOGO.png" alt="logo"></a>
+                        <a href="index.php" class="logo"><img src="public/Asset/img/LOGO.png" alt="logo"></a>
                     </div>
-                    <div class="col-6" id="search">
+                    <div class="col-5" id="search">
                         <form>
                             <div class="input-group">
                                 <input type="search" placeholder="Bạn đang muốn mua gì..." class="form-control">
@@ -15,21 +15,46 @@
                             </div>
                         </form>
                     </div>
+<<<<<<< HEAD
                     <!--<div class="col" id="Cart">
+=======
+                    <!-- <div class="col" id="Cart">
+>>>>>>> thienBranch
                         <i class="fas fa-shopping-cart cart"></i> Giỏ hàng
                     </div> -->
 
                     <?php 
+<<<<<<< HEAD
                         /** If user login, remove icon login and display name, image */
                         if(isset($_SESSION['UserName'])) {
                             echo ' <div class="col" id="Cart">
+=======
+                        require_once './classes/img.php';
+                        /** If user login, remove icon login and display name, image */
+                        if(isset($_SESSION['UserName'])) {
+                            echo ' <div class="col-2" id="Cart">
+>>>>>>> thienBranch
                                         <i class="fas fa-shopping-cart cart"></i> Giỏ hàng
                                     </div> ';
                             /** Check if the user have image, then we display the img, or display the default 
                              * 
+<<<<<<< HEAD
                              * $user->checkIMG
                             */
                             echo '<a href="./uploadImg/uploadImg.php">Profile</a>"';
+=======
+                            */
+
+                            $imgCheck = new Img();
+
+                            if($imgCheck->checkImg($_SESSION['id']) == true) {
+                                $_SESSION['ImgName'] = $imgCheck->getImgName();
+                                echo '<img src="uploads/profile'.$imgCheck->getUserID().  $imgCheck->getImgName() . '.' . $imgCheck->getImgType().'">';
+                            } else {
+                                echo '<img src="uploads/'. $imgCheck->getImgName() .'.'. $imgCheck->getImgType().'">';
+                            }
+                            echo '<a href="./uploadImg.php">upload</a>"';
+>>>>>>> thienBranch
                             echo '<h1>'.$_SESSION['UserName'].'</h1>';
                             echo '<a href="logout.php">logout</a>';
                             
@@ -54,7 +79,11 @@
                                 <a href="account.php">Đăng ký</a>
                             </div>
                         </div>
+<<<<<<< HEAD
                     </div>-->
+=======
+                    </div> -->
+>>>>>>> thienBranch
                 </div>
             </div>
         </div>
