@@ -86,14 +86,19 @@
                         $st2->bindParam(1, $username);
                         $st2->execute();
                         $this->_resultUserReg = $st2->fetch();
+                        //Set value for prepare insert to profileimg table
+                        $userid = $this->_resultUserReg['UserID'];
+                        $status=1;
+                        $fileType = 'jpg';
+                        $NameImg = 'defaultimg';
                          //Insert value of sql 'select user' 
                         $st1 = $this->_pdo->prepare("INSERT INTO profileimg(userid, status, Type, Name) VALUE(?,?,?,?)");
-                        $st1->bindParam(1, $this->_resultUserReg['UserID']);
-                        $st1->bindParam(2, 1);
-                        $st1->bindParam(3, 'jpg');
-                        $st1->bindParam(4, 'defaultimg');
+                        $st1->bindParam(1, $userid);
+                        $st1->bindParam(2, $status);
+                        $st1->bindParam(3, $fileType);
+                        $st1->bindParam(4, $NameImg);
                         $st1->execute();
-                        header('location: account.php?message=success');
+                        header('location: ./account.php?message=success');
                         return true;
                     }
                 }

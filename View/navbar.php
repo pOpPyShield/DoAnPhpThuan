@@ -28,7 +28,6 @@
                                     </div> ';
                             /** Check if the user have image, then we display the img, or display the default 
                              * 
-                             * $user->checkIMG
                             */
 
                             $imgCheck = new Img();

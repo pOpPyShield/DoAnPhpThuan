@@ -10,7 +10,7 @@
                     <hr id="Indicator">
                 </div>
                 
-                <form id="LoginForm" method="POST" onsubmit="return validate()">
+                <form id="LoginForm" method="POST" action="display.php" onsubmit="return validate()">
                     <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username" id='name'>
                     <div id="user_error"></div>
                     <input type="password" placeholder="Mật khẩu" name="pwd" required id='pwd'>

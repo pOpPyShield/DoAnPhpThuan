@@ -58,11 +58,14 @@
                         $fileNameNew = "profile". $userID . '.' .$imgName."." .$fileActualExt;
                         $fileDestination = 'uploads/'.$fileNameNew; 
                         move_uploaded_file($fileTmpName, $fileDestination);
+                        // Set status
+                        $stat = 0;
+                        $usrID = $this->_userID;
                         $st = $this->_pdo->prepare('UPDATE profileimg SET Name = ?, Type = ?, status = ? WHERE userId = ?');
                         $st->bindParam(1, $fileName);
                         $st->bindParam(2, $fileActualExt);
-                        $st->bindParam(3, 0);
-                        $st->bindParam(4, $this->_UserID);
+                        $st->bindParam(3, $stat);
+                        $st->bindParam(4, $usrID);
                         $st->execute();
                         return 0;
                     }
