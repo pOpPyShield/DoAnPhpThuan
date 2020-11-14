@@ -10,14 +10,9 @@
                     <hr id="Indicator">
                 </div>
                 
-<<<<<<< HEAD
-                <form id="LoginForm" method="POST" action='display.php' onsubmit="return validate()">
-                    <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username" id='name'>
-=======
                 <form id="LoginForm" method="POST" action="display.php" onsubmit="return validate()">
                     <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username" id='name'>
                     <div id="user_error"></div>
->>>>>>> thienBranch
                     <input type="password" placeholder="Mật khẩu" name="pwd" required id='pwd'>
                     <input type="hidden" name = "token" value="">
                     <a href="#"><i>Quên mật khẩu</i></a>
