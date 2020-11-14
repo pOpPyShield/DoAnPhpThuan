@@ -4,7 +4,6 @@
         protected static $_instance = null;
         public $_pdo;
         public $_result;
-        public $_userID;
         public $_UserID;
         public $_imgType;
         public $_imgName;
@@ -32,7 +31,7 @@
             $st = $this->_pdo->prepare("SELECT * FROM profileimg WHERE userId = $idUser");
             $st->execute();
             $this->_result = $st->fetch();
-            $this->_imgType = $this->_result['type'];
+            $this->_imgType = $this->_result['Type'];
             $this->_imgName = $this->_result['Name'];
             if($this->_result['status'] == 0) {
                  $this->_UserID = $idUser;
@@ -42,8 +41,7 @@
             return false;
         }
 
-        public function uploadImg($userID, $imgName) {
-            $file = $_FILES['file'];
+        public function uploadImg($userID, $imgName, $namesubmit) {
             $fileName = $_FILES['file']['name'];
             $fileSize = $_FILES['file']['size'];
             $fileType = $_FILES['file']['type'];
@@ -55,22 +53,22 @@
             if(in_array($fileActualExt, $allowed)) {
                 if($fileError == 0) {
                     if($fileSize<100000) {
-                        $fileNameNew = "profile". $userID . '.' .$imgName."." .$fileActualExt;
+                        $fileNameNew = "profile". $userID .$fileExt[0]."." .$fileActualExt;
                         $fileDestination = 'uploads/'.$fileNameNew; 
                         move_uploaded_file($fileTmpName, $fileDestination);
                         // Set status
                         $stat = 0;
-                        $usrID = $this->_userID;
-                        $st = $this->_pdo->prepare('UPDATE profileimg SET Name = ?, Type = ?, status = ? WHERE userId = ?');
-                        $st->bindParam(1, $fileName);
-                        $st->bindParam(2, $fileActualExt);
-                        $st->bindParam(3, $stat);
-                        $st->bindParam(4, $usrID);
+                        $imgNam1 = $fileExt[0];
+                        $st = $this->_pdo->prepare('UPDATE profileimg SET Name = ?, status = ? ,Type = ? WHERE userId = ?');
+                        $st->bindParam(1, $imgNam1);
+                        $st->bindParam(2, $stat);
+                        $st->bindParam(3, $fileActualExt);
+                        $st->bindParam(4, $userID);
                         $st->execute();
-                        return 0;
+                        return true;
                     }
                     else {
-                        return 1;
+                        return false;
                     }
                 }
             }

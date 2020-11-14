@@ -4,7 +4,7 @@
     require_once './classes/img.php';
     if(isset($_POST['submit'])) {
         $img = new Img();
-        if($img->uploadImg($_SESSION['id'], $_SESSION['ImgName']) == 0) {
+        if($img->uploadImg($_SESSION['id'], $_SESSION['ImgName'], $_FILES['file'])) {
             header('Location: ./?uploadsuccess');
         } else {
             header('Location: ./?uploadfailed');
@@ -20,7 +20,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="uploadImg.php" method="POST">
+    <form action="uploadImg.php" method="POST" enctype="multipart/form-data">
         <input type="file" name='file'>
         <button type="submit" name="submit">upload</button>
     </form>

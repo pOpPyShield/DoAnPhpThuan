@@ -32,9 +32,9 @@
 
                             $imgCheck = new Img();
 
-                            if($imgCheck->checkImg($_SESSION['UserID']) == true) {
+                            if($imgCheck->checkImg($_SESSION['id']) == true) {
                                 $_SESSION['ImgName'] = $imgCheck->getImgName();
-                                echo '<img src="uploads/profile'.$imgCheck->getUserID().  $imgCheck->getImgName() . '.' . $imgCheck->getImgType().'">'; /*This is the type of img*/ 
+                                echo '<img src="uploads/profile'.$imgCheck->getUserID().  $imgCheck->getImgName() . '.' . $imgCheck->getImgType().'">';
                             } else {
                                 echo '<img src="uploads/'. $imgCheck->getImgName() .'.'. $imgCheck->getImgType().'">';
                             }
