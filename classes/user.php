@@ -8,10 +8,7 @@
         public $username = '';
         public $_userID;
         public $_imgID;
-<<<<<<< HEAD
-=======
         public $_resultUserReg;
->>>>>>> thienBranch
         public function __construct()
         {
             try {
@@ -38,13 +35,10 @@
         public function getImgID() {
             return $this->_imgID;
         }
-<<<<<<< HEAD
-=======
 
         public function getResultUserReg() {
             return $this->_resultUserReg;
         }
->>>>>>> thienBranch
         public function login($username, $pwd) {
             if(!empty($username) && !empty($pwd)) {
                 $st = $this->_pdo->prepare("SELECT * FROM user WHERE UserName=?");
@@ -54,12 +48,8 @@
                     $this->_result = $st->fetch();
                     if(password_verify($_POST['pwd'], $this->_result['Password'])) {
                         $this->username = $this->_result['UserName'];
-<<<<<<< HEAD
-                        $this->_userID = $this->_result['UserID'];
-=======
                         //$this->_userID = $this->_result['UserID'];
                         $_SESSION['id'] = $this->_result['UserID'];
->>>>>>> thienBranch
                         $_SESSION['UserName'] = $this->_result['UserName'];
                         $_SESSION['level'] = 'user';
                         $_SESSION['is_login'] = true;
@@ -79,48 +69,16 @@
             $email1 = filter_var( $Email, FILTER_VALIDATE_EMAIL);
             if(!empty($username) && !empty($Email) && $email1 != false && !empty($Password) && !empty($pwdagain)) {
                 if($Password != $pwdagain) {
-<<<<<<< HEAD
-                    header('Location: account.php');
-                    exit();
-                } else {
-                    $pwd1 = password_hash($Password, PASSWORD_BCRYPT);
-=======
                     //If pw = 0, that is the pwd is not match
                     header('Location: account.php?pw=0');
                     exit();
                 } else {
                     $pwd1 = password_hash($Password, PASSWORD_BCRYPT);
                     //Reg user
->>>>>>> thienBranch
                     $st = $this->_pdo->prepare("INSERT INTO user(UserName, Password, Email) VALUES (?, ?, ?)");
                     $st->bindParam(1, $username);
                     $st->bindParam(2, $pwd1);
                     $st->bindParam(3, $email1);
-<<<<<<< HEAD
-                    $st1 = $this->_pdo->prepare("INSERT INTO profileimg(userid, status) VALUE(?,?,?)");
-                    $st1->bindParam(1, $this->_userID);
-                    $st1->bindParam(2, 1);
-                    if($st->execute() && $st1->execute()) {
-                        header('location: account.php?message=success');
-                    }
-
-                }
-            } else {
-                echo 'dont valid';
-            }
-        }
-        /** Replace to another model, must be IMG model to check IMG and upload IMG for user */
-        public function checkImg($idUser) {
-            $st = $this->_pdo->prepare("SELECT * FROM profileimg WHERE userId = $idUser");
-            $st->execute();
-            $this->_result = $st->fetch();
-            if($this->_result['status'] == 0) {
-                 $this->_imgID = $idUser;
-                 return true;
-            }
-
-            return false;
-=======
                     //If execute success, then go to if block
                     if($st->execute()) {
                         //Select user with username
@@ -147,7 +105,6 @@
             } else {
                 return false;
             }
->>>>>>> thienBranch
         }
         /** Replace to another model, must be IMG model to check IMG and upload IMG for user */
     }
