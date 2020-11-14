@@ -50,16 +50,6 @@
                     } else {
                         return false;
                     }
-                    /*if(password_verify($pwd, $this->_result['Password'])) {
-                        $this->username = $this->_result['UserName'];
-                        echo 'Success';
-                    } else {
-                        echo 'failed verify';
-                    }*/
-                    /*if($_SESSION['UserName'] = $un && password_verify( $pwd, $this->_result['Password'])) {
-                        header("location: indexi.php?message=success");
-                    }*/
-                    
                 } else {
                     return false;
                 }
