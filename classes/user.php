@@ -87,9 +87,11 @@
                         $st2->execute();
                         $this->_resultUserReg = $st2->fetch();
                          //Insert value of sql 'select user' 
-                        $st1 = $this->_pdo->prepare("INSERT INTO profileimg(userid, status) VALUE(?,?)");
+                        $st1 = $this->_pdo->prepare("INSERT INTO profileimg(userid, status, Type, Name) VALUE(?,?,?,?)");
                         $st1->bindParam(1, $this->_resultUserReg['UserID']);
                         $st1->bindParam(2, 1);
+                        $st1->bindParam(3, 'jpg');
+                        $st1->bindParam(4, 'defaultimg');
                         $st1->execute();
                         header('location: account.php?message=success');
                         return true;
@@ -100,17 +102,6 @@
             }
         }
         /** Replace to another model, must be IMG model to check IMG and upload IMG for user */
-        public function checkImg($idUser) {
-            $st = $this->_pdo->prepare("SELECT * FROM profileimg WHERE userId = $idUser");
-            $st->execute();
-            $this->_result = $st->fetch();
-            if($this->_result['status'] == 0) {
-                 $this->_imgID = $idUser;
-                 return true;
-            }
-
-            return false;
-        }
     }
 
 ?>

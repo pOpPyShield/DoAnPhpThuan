@@ -34,11 +34,12 @@
                             $imgCheck = new Img();
 
                             if($imgCheck->checkImg($_SESSION['UserID']) == true) {
-                                echo '<img src="uploads/profile'.$_SESSION['UserID'].  '">'; /*This is the type of img*/ 
+                                $_SESSION['ImgName'] = $imgCheck->getImgName();
+                                echo '<img src="uploads/profile'.$imgCheck->getUserID().  $imgCheck->getImgName() . '.' . $imgCheck->getImgType().'">'; /*This is the type of img*/ 
                             } else {
-                                echo '<img src="uploads/defaultIMG.jpg">';
+                                echo '<img src="uploads/'. $imgCheck->getImgName() .'.'. $imgCheck->getImgType().'">';
                             }
-                            echo '<a href="./uploadImg/uploadImg.php">Profile</a>"';
+                            echo '<a href="./uploadImg.php">upload</a>"';
                             echo '<h1>'.$_SESSION['UserName'].'</h1>';
                             echo '<a href="logout.php">logout</a>';
                             
