@@ -71,7 +71,7 @@
             if(!empty($username) && !empty($Email) && $email1 != false && !empty($Password) && !empty($pwdagain)) {
                 if($Password != $pwdagain) {
                     //If pw = 0, that is the pwd is not match
-                    header('Location: account.php?pw=0');
+                    header('Location: ../?pw=0');
                     exit();
                 } else {
                     $pwd1 = password_hash($Password, PASSWORD_BCRYPT);
@@ -99,7 +99,7 @@
                         $st1->bindParam(3, $fileType);
                         $st1->bindParam(4, $NameImg);
                         $st1->execute();
-                        header('location: ./account.php?message=success');
+                        header('location: ../account_log.php?message=success');
                         return true;
                     }
                 }

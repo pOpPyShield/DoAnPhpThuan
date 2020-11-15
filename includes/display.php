@@ -17,7 +17,7 @@
             $pwd = $_POST['pwd'];
             if($user->login($name, $pwd) != false) {
                 if($_SESSION['level'] == 'user' && $_SESSION['is_login'] == true) {
-                    header('Location: ../');
+                    header('Location: ../index.php?login=success');
                 }   
             } elseif($object->login($name, $pwd)) {
                 if($_SESSION['level'] == 'admin' && $_SESSION['is_login'] == true) {
