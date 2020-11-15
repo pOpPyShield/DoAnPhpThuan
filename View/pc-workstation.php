@@ -1,4 +1,4 @@
-public/<div class="title">
+<div class="title">
                     <p class="product-selling">
                         PC - WORKSTATION
                     </p>
