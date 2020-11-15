@@ -18,7 +18,9 @@
         }
         /******IMG*****/
         /******Search*****/
-        
+        .row .User_name {
+            color: red;
+        }
         .search-account {
             background: #ecf0f1;
         }

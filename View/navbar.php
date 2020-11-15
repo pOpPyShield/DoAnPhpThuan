@@ -37,7 +37,7 @@
                             } else {
                                 echo '<img src="uploads/'. $imgCheck->getImgName() .'.'. $imgCheck->getImgType().'">';
                             }
-                            echo '<h1>'.$_SESSION['UserName'].'</h1>';
+                            echo '<h1 class="User_name">'.$_SESSION['UserName'].'</h1>';
                     ?>
                             <a href="./uploadImg.php">upload</a>
                             <a href="includes/logout.php">logout</a>
@@ -72,7 +72,7 @@
                             </div>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="indexi.php">Trang chủ</a>
+                            <a class="nav-link" href="index.php">Trang chủ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Sản phẩm</a>
