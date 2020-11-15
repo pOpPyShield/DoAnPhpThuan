@@ -7,8 +7,9 @@
                     <!-----1-->
                     <li class="item-a">
                         <div class="box">
+                        <a href="detail-product.php">
                             <img src="public/Asset/img/new-product-1.jpg" class="model" alt="n-p1">
-
+                        </a>
                             <div class="detail">
                                 <a href="detail-product.php" class="name-product">HT Titan 10 M</a>
                                 <div class="price-del">

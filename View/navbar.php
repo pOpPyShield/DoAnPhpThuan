@@ -2,10 +2,10 @@
         <div class="search-account">
             <div class="container">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-3.5">
                         <a href="#" class="logo"><img src="public/Asset/img/LOGO.png" alt="logo"></a>
                     </div>
-                    <div class="col-5" id="search">
+                    <div class="col-4" id="search">
                         <form>
                             <div class="input-group">
                                 <input type="search" placeholder="Bạn đang muốn mua gì..." class="form-control">
@@ -28,19 +28,26 @@
                                 <a href="#"><i class="fas fa-shopping-cart cart"></i> Giỏ hàng</a>
                             </div>
                             <!-- Check if the user have image, then we display the img, or display the default -->
-            <!--2--><?php
+            <!--2-->
+                            <div class="dropdown">
+                                <button class="dropbtn">
+                    <?php
                             $imgCheck = new Img();
 
                             if($imgCheck->checkImg($_SESSION['id']) == true) {
                                 $_SESSION['ImgName'] = $imgCheck->getImgName();
-                                echo '<img src="uploads/profile'.$imgCheck->getUserID().  $imgCheck->getImgName() . '.' . $imgCheck->getImgType().'">';
+                                echo '<img class="img_user" src="uploads/profile'.$imgCheck->getUserID().  $imgCheck->getImgName() . '.' . $imgCheck->getImgType().'">';
                             } else {
-                                echo '<img src="uploads/'. $imgCheck->getImgName() .'.'. $imgCheck->getImgType().'">';
+                                echo '<img class="img_user" src="uploads/'. $imgCheck->getImgName() .'.'. $imgCheck->getImgType().'">';
                             }
-                            echo '<h1 class="User_name">'.$_SESSION['UserName'].'</h1>';
                     ?>
-                            <a href="./uploadImg.php">upload</a>
-                            <a href="includes/logout.php">logout</a>
+                                </button>
+                                <div class="dropdown-content">
+                                <a href="./uploadImg.php">Sửa ảnh</a>
+                                <a href="includes/logout.php">Đăng xuất</a>
+                            </div>
+                            <?php echo '<h1 class="User_name">'.$_SESSION['UserName'].'</h1>'; ?>
+                            
             <!--3--><?php     
                         } else {
                     ?>
@@ -67,9 +74,6 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <div class="btn">
-                                <span class="fas fa-bars"></span>
-                            </div>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="index.php">Trang chủ</a>
@@ -95,4 +99,4 @@
                 </div>
             </nav>
         </div>
-    </div>
+</div>

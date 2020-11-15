@@ -34,9 +34,8 @@ require_once './View/header.php'?>
             <div class="row" id="selling">
                 <?php include_once './View/emailenter.php'; ?>
             </div>
-    
-        </section>
-        </div>  
+
+            </div>  
         </div>
 </section>
     <!------End-Main-->

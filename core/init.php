@@ -3,7 +3,7 @@
         'mysql' => array(
             'host' => '127.0.0.1',
             'username' => 'root',
-            'password' => 'LilBump$26112001',
+            'password' => 'Minhthien6879',
             'db' => 'again',
         ),
         'remember' => array(
