@@ -9,13 +9,6 @@
         $userReg = new User();
         $userReg->reg($name, $pwd, $email, $pwdagain);
     }   
-
-    if(isset($_GET['message'])) {
-        $message = $_GET['message'];
-        if($message == 'success') {
-            echo '<script>alert("Registation done")</script>';
-        }
-    }
     
 
 

@@ -1,5 +1,9 @@
 
 <?php include_once './View/header.php';?>
+<?php if(isset($_GET['regUser']) == 'success') { ?>
+        <script>alert('Register user success,  login to use');</script>
+<?php } ?>
+
     <!-------Account-->
     <link rel="stylesheet" type="text/css" href="public/Asset/style/account_log.css">
     <div class="account-page">

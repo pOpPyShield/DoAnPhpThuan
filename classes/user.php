@@ -99,7 +99,7 @@
                         $st1->bindParam(3, $fileType);
                         $st1->bindParam(4, $NameImg);
                         $st1->execute();
-                        header('location: ../account_log.php?message=success');
+                        header('location: ../account_log.php?regUser=success');
                         return true;
                     }
                 }

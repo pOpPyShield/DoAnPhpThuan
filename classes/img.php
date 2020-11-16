@@ -65,6 +65,9 @@
                         $st->bindParam(2, $stat);
                         $st->bindParam(3, $fileActualExt);
                         $st->bindParam(4, $userID);
+                        echo '<pre>';
+                        print_r($st);
+                        echo '</pre>';
                         $st->execute();
                         return true;
                     }
