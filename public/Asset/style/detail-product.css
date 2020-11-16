@@ -104,15 +104,21 @@
 }
 
 table {
-    font-family: arial, sans-serif;
+    font-family: Roboto, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-td,
+.describe_product {
+    margin-top: 2rem;
+}
+
+.describe td,
 th {
-    color: blue;
+    color: black;
     border: 1px solid #dddddd;
     text-align: center;
-    padding: 8px;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid black;
 }
