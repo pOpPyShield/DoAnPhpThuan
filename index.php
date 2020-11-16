@@ -2,6 +2,12 @@
 session_start();
 
 require_once './View/header.php'?>
+<?php if(isset($_GET['upload'])=='success') {?>
+        <script>alert('Upload img success');</script>
+<?php } ?> 
+<?php if(isset($_GET['logout']) == 'success') {?>
+        <script>alert('Have nice day');</script>
+<?php } ?>
     <!------Start-Main-->
 <section class="Main">
         <div class="container">

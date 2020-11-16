@@ -4,9 +4,9 @@
     if(isset($_POST['submit'])) {
         $img = new Img();
         if($img->uploadImg($_SESSION['id'], $_FILES['file'])) {
-            header('Location: ./?uploadsuccess');
+            header('Location: ./?upload=success');
         } else {
-            header('Location: ./?uploadfailed');
+            header('Location: ./?upload=failed');
         }
     }
 ?>

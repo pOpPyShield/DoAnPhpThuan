@@ -2,6 +2,9 @@
 <?php include_once './View/header.php';?>
 <?php if(isset($_GET['regUser']) == 'success') { ?>
         <script>alert('Register user success,  login to use');</script>
+<?php } ?> 
+<?php if(isset($_GET['message']) == 'failed') { ?>
+        <script>alert('Login failed, are u register?');</script>
 <?php } ?>
 
     <!-------Account-->
