@@ -1,9 +1,9 @@
 <?php 
-
+    session_start();
     require_once './classes/img.php';
     if(isset($_POST['submit'])) {
         $img = new Img();
-        if($img->uploadImg($_SESSION['id'], $_SESSION['ImgName'], $_FILES['file'])) {
+        if($img->uploadImg($_SESSION['id'], $_FILES['file'])) {
             header('Location: ./?uploadsuccess');
         } else {
             header('Location: ./?uploadfailed');

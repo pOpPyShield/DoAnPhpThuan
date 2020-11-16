@@ -42,7 +42,7 @@
             return false;
         }
 
-        public function uploadImg($userID, $imgName, $namesubmit) {
+        public function uploadImg($userID, $namesubmit) {
             $fileName = $_FILES['file']['name'];
             $fileSize = $_FILES['file']['size'];
             $fileType = $_FILES['file']['type'];
@@ -56,18 +56,17 @@
                     if($fileSize<100000) {
                         $fileNameNew = "profile". $userID .$fileExt[0]."." .$fileActualExt;
                         $fileDestination = 'uploads/'.$fileNameNew; 
+                        print_r($fileDestination);
                         move_uploaded_file($fileTmpName, $fileDestination);
                         // Set status
                         $stat = 0;
                         $imgNam1 = $fileExt[0];
+                        $usrID = $userID;
                         $st = $this->_pdo->prepare('UPDATE profileimg SET Name = ?, status = ? ,Type = ? WHERE userId = ?');
                         $st->bindParam(1, $imgNam1);
                         $st->bindParam(2, $stat);
                         $st->bindParam(3, $fileActualExt);
-                        $st->bindParam(4, $userID);
-                        echo '<pre>';
-                        print_r($st);
-                        echo '</pre>';
+                        $st->bindParam(4, $usrID);
                         $st->execute();
                         return true;
                     }

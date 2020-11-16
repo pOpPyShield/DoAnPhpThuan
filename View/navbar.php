@@ -36,9 +36,9 @@
 
                             if($imgCheck->checkImg($_SESSION['id']) == true) {
                                 $_SESSION['ImgName'] = $imgCheck->getImgName();
-                                echo '<img class="img_user" src="uploads/profile'.$imgCheck->getUserID() . $imgCheck->getImgName() . '.' . $imgCheck->getImgType().'">';
+                                echo '<img class="img_user" src="uploads/profile'. $imgCheck->getUserID() . $imgCheck->getImgName() . '.' . $imgCheck->getImgType().'">';
                             } else {
-                                echo '<img class="img_user" src="uploads/'. $imgCheck->getImgName() .'.'. $imgCheck->getImgType().'">';
+                                echo '<img class="img_user" src="uploads/profile'. $imgCheck->getImgName() .'.'. $imgCheck->getImgType().'">';
                             }
                     ?>
                                 </button>
