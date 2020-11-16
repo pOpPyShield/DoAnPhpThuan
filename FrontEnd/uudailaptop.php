@@ -1,18 +1,18 @@
                 <div class="title">
                     <p class="product-selling">
-                        Màn Hình Khuyến Mãi
+                        Ưu Đãi Laptop
                     </p>
                 </div>
-                <ul id="autoWidth4" class="cs-hidden4">
+                <ul id="autoWidth3" class="cs-hidden3">
                     <!-----1-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/man-hinh-1.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/laptop-1.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Màn hình ASUS VA24EHE 24" IPS 75Hz viền mỏng</a>
+                                <a href="#" class="name-product">Laptop gaming Acer Nitro 5 AN515 55 5923</a>
                                 <div class="price-del">
-                                    <del>3,960,000₫</del>
-                                    <div class="price">3,390,000₫</div>
+                                    <del>23,990,000₫</del>
+                                    <div class="price">22,290,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -20,12 +20,12 @@
                     <!-----2-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/man-hinh-2.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/laptop-2.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Màn hình LG 24MP59G-P 24" IPS 75Hz Freesync</a>
+                                <a href="#" class="name-product">Laptop Gaming MSI GF63 Thin 9SCSR 846VN</a>
                                 <div class="price-del">
-                                    <del>3,460,000₫</del>
-                                    <div class="price">3,090,000₫</div>
+                                    <del>24,960,000₫</del>
+                                    <div class="price">23,390,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -33,12 +33,12 @@
                     <!-----3-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/man-hinh-3.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/laptop-3.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Màn hình Viewsonic VA2261H-2 22"</a>
+                                <a href="#" class="name-product">Laptop Gaming MSI GF63 Thin 10SCSR 830VN</a>
                                 <div class="price-del">
-                                    <del></del>
-                                    <div class="price">2,390,000₫</div>
+                                    <del>27,960,000</del>
+                                    <div class="price">23,390,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -46,12 +46,12 @@
                     <!-----4-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/man-hinh-4.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/laptop-4.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Màn hình Viewsonic VX2776 27" IPS siêu mỏng</a>
+                                <a href="#" class="name-product">Laptop Gaming MSI GF65 Thin 10SDR 623VN</a>
                                 <div class="price-del">
-                                    <del>5,090,000₫</del>
-                                    <div class="price">4,290,000₫</div>
+                                    <del>28,960,000₫</del>
+                                    <div class="price">25,390,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -60,12 +60,12 @@
                     <!-----5-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/man-hinh-5.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/laptop-5.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Màn hình Acer EK241Y 24" IPS 75Hz</a>
+                                <a href="#" class="name-product">Laptop gaming Acer Nitro 5 AN515 55 77P9</a>
                                 <div class="price-del">
-                                    <del>3,560,000₫</del>
-                                    <div class="price">3,250,000₫</div>
+                                    <del>28,960,000₫</del>
+                                    <div class="price">26,390,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -73,26 +73,26 @@
                     <!-----6-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/man-hinh-6.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/laptop-6.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Màn Hình Samsung LS24R350 24" IPS 75Hz </a>
+                                <a href="#" class="name-product">Laptop gaming Acer Nitro 5 AN515 55 55E3</a>
                                 <div class="price-del">
-                                    <del>3,460,000₫</del>
-                                    <div class="price">3,290,000₫</div>
+                                    <del>31,960,000₫</del>
+                                    <div class="price">28,390,000₫</div>
                                 </div>
-
                             </div>
                         </div>
                     </li>
                     <!-----7-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/man-hinh-7.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/laptop-7.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Màn hình Viewsonic VX2781-MH 27" IPS 75Hz</a>
+                                <a href="#" class="name-product">Laptop Gaming ASUS ROG Zephyrus G15 GA502IU AL007T
+                                </a>
                                 <div class="price-del">
-                                    <del></del>
-                                    <div class="price">4,990,000₫</div>
+                                    <del>29,960,000₫</del>
+                                    <div class="price">28,390,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -100,12 +100,12 @@
                     <!-----8-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/man-hinh-8.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/laptop-8.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Màn hình Asus VZ249HEG1R 24" IPS 75Hz</a>
+                                <a href="#" class="name-product">Laptop Gaming MSI GL65 Leopard 10SDK 242VN</a>
                                 <div class="price-del">
-                                    <del>3,790,000₫</del>
-                                    <div class="price">3,690,000₫</div>
+                                    <del>33,960,000₫</del>
+                                    <div class="price">30,390,000₫</div>
                                 </div>
                             </div>
                         </div>

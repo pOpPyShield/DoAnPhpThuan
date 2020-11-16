@@ -7,7 +7,7 @@
                     <!-----1-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/chuot-1.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/chuot-1.jpg" class="model" alt="n-p1">
                             <div class="detail">
                                 <a href="#" class="name-product">Chuột Logitech B100</a>
                                 <div class="price-del">
@@ -20,7 +20,7 @@
                     <!-----2-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/chuot-2.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/chuot-2.jpg" class="model" alt="n-p1">
                             <div class="detail">
                                 <a href="#" class="name-product">Chuột Logitech G102 Lightsync RGB Black</a>
                                 <div class="price-del">
@@ -33,7 +33,7 @@
                     <!-----3-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/chuot-3.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/chuot-3.jpg" class="model" alt="n-p1">
                             <div class="detail">
                                 <a href="#" class="name-product">Chuột Logitech G102 Lightsync RGB White</a>
                                 <div class="price-del">
@@ -46,7 +46,7 @@
                     <!-----4-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/chuot-4.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/chuot-4.jpg" class="model" alt="n-p1">
                             <div class="detail">
                                 <a href="#" class="name-product">Chuột Logitech G302 Daedalus Prime</a>
                                 <div class="price-del">
@@ -60,7 +60,7 @@
                     <!-----5-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/chuot-5.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/chuot-5.jpg" class="model" alt="n-p1">
                             <div class="detail">
                                 <a href="#" class="name-product">Chuột Logitech G402 Hyperion</a>
                                 <div class="price-del">
@@ -73,7 +73,7 @@
                     <!-----6-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/chuot-6.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/chuot-6.jpg" class="model" alt="n-p1">
                             <div class="detail">
                                 <a href="#" class="name-product">Chuột Logitech G403 HERO</a>
                                 <div class="price-del">
@@ -87,7 +87,7 @@
                     <!-----7-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/chuot-7.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/chuot-7.jpg" class="model" alt="n-p1">
                             <div class="detail">
                                 <a href="#" class="name-product">Chuột Logitech G502 Hero</a>
                                 <div class="price-del">
@@ -100,7 +100,7 @@
                     <!-----8-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/chuot-8.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/chuot-8.jpg" class="model" alt="n-p1">
                             <div class="detail">
                                 <a href="#" class="name-product">Chuột Logitech G903 Hero Lightspeed Wireless</a>
                                 <div class="price-del">
