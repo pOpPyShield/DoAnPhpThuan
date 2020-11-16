@@ -1,19 +1,18 @@
-                <div class="title">
+<div class="title">
                     <p class="product-selling">
-                        Bàn Phím Gaming Giá Rẻ
+                        PC - WORKSTATION
                     </p>
                 </div>
-                <ul id="autoWidth7" class="cs-hidden7">
+                <ul id="autoWidth6" class="cs-hidden6">
                     <!-----1-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/ban-phim-1.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/pc-workstation-1.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Bàn phím Newmen T260</a>
+                                <a href="#" class="name-product">HT G-Creator C301</a>
                                 <div class="price-del">
-                                    <del></del>
-                                    <div class="price">280,000₫
-                                    </div>
+                                    <del>17,290,000₫</del>
+                                    <div class="price">14,790,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -21,13 +20,12 @@
                     <!-----2-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/ban-phim-2.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/pc-workstation-2.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Bàn phím Gaming DareU LK145 USB</a>
+                                <a href="#" class="name-product">HT G-Creator C303</a>
                                 <div class="price-del">
-                                    <del>480,000₫</del>
-                                    <div class="price">350,000₫
-                                    </div>
+                                    <del>21,950,000₫</del>
+                                    <div class="price">19,390,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -35,12 +33,12 @@
                     <!-----3-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/ban-phim-3.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/pc-workstation-3.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">HT Mystic</a>
+                                <a href="#" class="name-product">HT G-Creator C304</a>
                                 <div class="price-del">
-                                    <del>499,000₫</del>
-                                    <div class="price">490,000₫</div>
+                                    <del>27,250,000₫</del>
+                                    <div class="price">23,290,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -48,12 +46,13 @@
                     <!-----4-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/ban-phim-4.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/pc-workstation-4.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Bộ Bàn Phím Chuột Giả Cơ Rapoo V100S</a>
+                                <a href="#" class="name-product">HT G-Station K301
+                                </a>
                                 <div class="price-del">
-                                    <del>690,000₫</del>
-                                    <div class="price">490,000₫</div>
+                                    <del>25,300,000₫</del>
+                                    <div class="price">23,490,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -62,12 +61,12 @@
                     <!-----5-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/ban-phim-5.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/pc-workstation-5.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Bàn phím Rapoo V500 Alloy</a>
+                                <a href="#" class="name-product">HT G-Creator C501</a>
                                 <div class="price-del">
-                                    <del>690,000₫</del>
-                                    <div class="price">490,000₫</div>
+                                    <del>27,130,000₫</del>
+                                    <div class="price">23,790,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -75,13 +74,12 @@
                     <!-----6-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/ban-phim-6.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/pc-workstation-6.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Bàn phím cơ Gaming DAREU EK87 - Black (Multi-LED)</a>
+                                <a href="#" class="name-product">HT G-Station K302</a>
                                 <div class="price-del">
-                                    <del>599,000₫</del>
-                                    <div class="price">550,000₫
-                                    </div>
+                                    <del>30,580,000₫</del>
+                                    <div class="price">27,790,000₫</div>
                                 </div>
 
                             </div>
@@ -90,13 +88,12 @@
                     <!-----7-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/ban-phim-7.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/pc-workstation-7.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Bàn phím Fuhlen G87L</a>
+                                <a href="#" class="name-product">HT G-Creator C305</a>
                                 <div class="price-del">
-                                    <del></del>
-                                    <div class="price">550,000₫
-                                    </div>
+                                    <del>34,360,000₫</del>
+                                    <div class="price">30,690,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -104,13 +101,12 @@
                     <!-----8-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/ban-phim-8.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/pc-workstation-8.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Bàn phím DareU EK169</a>
+                                <a href="#" class="name-product">HT G-Station K303</a>
                                 <div class="price-del">
-                                    <del>690,000₫</del>
-                                    <div class="price">580,000₫
-                                    </div>
+                                    <del>40,290,000₫</del>
+                                    <div class="price">37,990,000₫</div>
                                 </div>
                             </div>
                         </div>

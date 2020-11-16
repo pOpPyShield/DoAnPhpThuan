@@ -3,7 +3,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-3.5">
-                        <a href="#" class="logo"><img src="public/Asset/img/LOGO.png" alt="logo"></a>
+                        <a href="#" class="logo"><img src="Public/Asset/img/LOGO.png" alt="logo"></a>
                     </div>
                     <div class="col-4" id="search">
                         <form>
@@ -20,7 +20,7 @@
                     </div> -->
 
             <!--1--><?php 
-                        require_once './classes/img.php';
+                        require_once './Classes/img.php';
                         /** If user login, remove icon login and display name, image */
                         if(isset($_SESSION['UserName'])) {
                     ?>      
@@ -36,15 +36,15 @@
 
                             if($imgCheck->checkImg($_SESSION['id']) == true) {
                                 $_SESSION['ImgName'] = $imgCheck->getImgName();
-                                echo '<img class="img_user" src="uploads/profile'. $imgCheck->getUserID() . $imgCheck->getImgName() . '.' . $imgCheck->getImgType().'">';
+                                echo '<img class="img_user" src="Uploads/profile'. $imgCheck->getUserID() . $imgCheck->getImgName() . '.' . $imgCheck->getImgType().'">';
                             } else {
-                                echo '<img class="img_user" src="uploads/profile'. $imgCheck->getImgName() .'.'. $imgCheck->getImgType().'">';
+                                echo '<img class="img_user" src="Uploads/profile'. $imgCheck->getImgName() .'.'. $imgCheck->getImgType().'">';
                             }
                     ?>
                                 </button>
                                 <div class="dropdown-content">
-                                <a href="./uploadImg.php">Sửa ảnh</a>
-                                <a href="includes/logout.php">Đăng xuất</a>
+                                <a href="uploadImg.php">Sửa ảnh</a>
+                                <a href="Includes/logout.php">Đăng xuất</a>
                             </div>
                             <?php echo '<h1 class="User_name">'.$_SESSION['UserName'].'</h1>'; ?>
                             
@@ -76,7 +76,7 @@
                         <li class="nav-item">
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.php">Trang chủ</a>
+                            <a class="nav-link" href="/">Trang chủ</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Sản phẩm</a>

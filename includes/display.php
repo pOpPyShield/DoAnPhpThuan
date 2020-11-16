@@ -1,10 +1,10 @@
 
 <?php
     session_start();
-    require_once '../classes/admin.php';
-    require_once '../classes/user.php';
-    require_once '../classes/superadmin.php';
-    require_once '../functions/sanitize.php';
+    require_once '../Classes/admin.php';
+    require_once '../Classes/user.php';
+    require_once '../Classes/superadmin.php';
+    require_once '../Functions/sanitize.php';
         $object = new Admin();
         $user = new User();
         $superadmin = new superAdmin();
@@ -26,7 +26,7 @@
                 if($_SESSION['level'] == 'superadmin' && $_SESSION['is_login']==true) {
                     header('Location: ../superadmindashboard.php?superadmin=' . $_SESSION['id']);
                 }
-                
+
             } else {
                 header('location: ../account_log.php?message=failed');
             } 

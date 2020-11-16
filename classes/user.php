@@ -1,5 +1,5 @@
 <?php 
-    require_once '../core/Init.php';
+    require_once '../Core/Init.php';
     require_once 'config.php';
     session_start();
     class User{
@@ -99,7 +99,6 @@
                         $st1->bindParam(3, $fileType);
                         $st1->bindParam(4, $NameImg);
                         $st1->execute();
-                        header('location: ../account_log.php?regUser=success');
                         return true;
                     }
                 }

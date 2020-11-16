@@ -1,18 +1,19 @@
                 <div class="title">
                     <p class="product-selling">
-                        Ưu Đãi Laptop
+                        Bàn Phím Gaming Giá Rẻ
                     </p>
                 </div>
-                <ul id="autoWidth3" class="cs-hidden3">
+                <ul id="autoWidth7" class="cs-hidden7">
                     <!-----1-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/laptop-1.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/ban-phim-1.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Laptop gaming Acer Nitro 5 AN515 55 5923</a>
+                                <a href="#" class="name-product">Bàn phím Newmen T260</a>
                                 <div class="price-del">
-                                    <del>23,990,000₫</del>
-                                    <div class="price">22,290,000₫</div>
+                                    <del></del>
+                                    <div class="price">280,000₫
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -20,12 +21,13 @@
                     <!-----2-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/laptop-2.jpg" class="model" alt="n-p1">
+                            <img src="public/Asset/Img/ban-phim-2.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Laptop Gaming MSI GF63 Thin 9SCSR 846VN</a>
+                                <a href="#" class="name-product">Bàn phím Gaming DareU LK145 USB</a>
                                 <div class="price-del">
-                                    <del>24,960,000₫</del>
-                                    <div class="price">23,390,000₫</div>
+                                    <del>480,000₫</del>
+                                    <div class="price">350,000₫
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -33,12 +35,12 @@
                     <!-----3-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/laptop-3.jpg" class="model" alt="n-p1">
+                            <img src="public/Asset/Img/ban-phim-3.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Laptop Gaming MSI GF63 Thin 10SCSR 830VN</a>
+                                <a href="#" class="name-product">HT Mystic</a>
                                 <div class="price-del">
-                                    <del>27,960,000</del>
-                                    <div class="price">23,390,000₫</div>
+                                    <del>499,000₫</del>
+                                    <div class="price">490,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -46,12 +48,12 @@
                     <!-----4-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/laptop-4.jpg" class="model" alt="n-p1">
+                            <img src="public/Asset/Img/ban-phim-4.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Laptop Gaming MSI GF65 Thin 10SDR 623VN</a>
+                                <a href="#" class="name-product">Bộ Bàn Phím Chuột Giả Cơ Rapoo V100S</a>
                                 <div class="price-del">
-                                    <del>28,960,000₫</del>
-                                    <div class="price">25,390,000₫</div>
+                                    <del>690,000₫</del>
+                                    <div class="price">490,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -60,12 +62,12 @@
                     <!-----5-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/laptop-5.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/ban-phim-5.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Laptop gaming Acer Nitro 5 AN515 55 77P9</a>
+                                <a href="#" class="name-product">Bàn phím Rapoo V500 Alloy</a>
                                 <div class="price-del">
-                                    <del>28,960,000₫</del>
-                                    <div class="price">26,390,000₫</div>
+                                    <del>690,000₫</del>
+                                    <div class="price">490,000₫</div>
                                 </div>
                             </div>
                         </div>
@@ -73,26 +75,28 @@
                     <!-----6-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/laptop-6.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/ban-phim-6.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Laptop gaming Acer Nitro 5 AN515 55 55E3</a>
+                                <a href="#" class="name-product">Bàn phím cơ Gaming DAREU EK87 - Black (Multi-LED)</a>
                                 <div class="price-del">
-                                    <del>31,960,000₫</del>
-                                    <div class="price">28,390,000₫</div>
+                                    <del>599,000₫</del>
+                                    <div class="price">550,000₫
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </li>
                     <!-----7-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/laptop-7.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/ban-phim-7.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Laptop Gaming ASUS ROG Zephyrus G15 GA502IU AL007T
-                                </a>
+                                <a href="#" class="name-product">Bàn phím Fuhlen G87L</a>
                                 <div class="price-del">
-                                    <del>29,960,000₫</del>
-                                    <div class="price">28,390,000₫</div>
+                                    <del></del>
+                                    <div class="price">550,000₫
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -100,12 +104,13 @@
                     <!-----8-->
                     <li class="item-a">
                         <div class="box">
-                            <img src="public/Asset/img/laptop-8.jpg" class="model" alt="n-p1">
+                            <img src="Public/Asset/Img/ban-phim-8.jpg" class="model" alt="n-p1">
                             <div class="detail">
-                                <a href="#" class="name-product">Laptop Gaming MSI GL65 Leopard 10SDK 242VN</a>
+                                <a href="#" class="name-product">Bàn phím DareU EK169</a>
                                 <div class="price-del">
-                                    <del>33,960,000₫</del>
-                                    <div class="price">30,390,000₫</div>
+                                    <del>690,000₫</del>
+                                    <div class="price">580,000₫
+                                    </div>
                                 </div>
                             </div>
                         </div>

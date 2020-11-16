@@ -1,5 +1,5 @@
 <?php
-    require_once '../core/Init.php';
+    require_once '../Core/Init.php';
     require_once 'config.php';
     Class SuperAdmin{
 

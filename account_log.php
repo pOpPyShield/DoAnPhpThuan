@@ -1,5 +1,5 @@
 
-<?php include_once './View/header.php';?>
+<?php include_once './FrontEnd/header.php';?>
 <?php if(isset($_GET['regUser']) == 'success') { ?>
         <script>alert('Register user success,  login to use');</script>
 <?php } ?> 
@@ -8,7 +8,7 @@
 <?php } ?>
 
     <!-------Account-->
-    <link rel="stylesheet" type="text/css" href="public/Asset/style/account_log.css">
+    <link rel="stylesheet" type="text/css" href="Public/Asset/Style/account_log.css">
     <div class="account-page">
         <div class="container">
             <div class="form-container">
@@ -18,7 +18,7 @@
                     <hr id="Indicator">
                 </div>
                 
-                <form id="LoginForm" method="POST" action="includes/display.php" onsubmit="return validate_login()">
+                <form id="LoginForm" method="POST" action="Includes/display.php" onsubmit="return validate_login()">
                     <label>Tên đăng nhập:</label>
                     <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username" id='name'>
                     <div id="user_error"></div>
@@ -29,7 +29,7 @@
                     <a href="forgotpwd.php"><i>Quên mật khẩu</i></a>
                     <button type="submit" class="btn-login" name="login" value="login">Đăng nhập</button>
                 </form>
-                <form id="RegForm" method="POST" action="includes/register.php" onsubmit="return validate_reg()">
+                <form id="RegForm" method="POST" action="Includes/register.php" onsubmit="return validate_reg()">
                     <label>Tên đăng nhập:</label>
                     <input type="text" placeholder="Tên đăng nhập" name="username" required autocomplete="username" id='name_reg'>
                     <div id="user_error_reg"></div>
@@ -46,7 +46,7 @@
 
                 </form>
             </div>
-            <script defer src="public/Asset/js/validate_log.js"></script>
+            <script defer src="Public/Asset/Js/validate_log.js"></script>
 
         </div>
     </div>

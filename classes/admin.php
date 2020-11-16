@@ -1,5 +1,5 @@
 <?php 
-    require_once '../core/init.php';
+    require_once '../Core/init.php';
     require_once 'config.php';
     class Admin {
         protected static $_instance = null;
